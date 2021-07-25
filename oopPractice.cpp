@@ -2,6 +2,16 @@
 using namespace std;
 int main()
 {
-    cou<<" Hello  " <<endl;
-    return 0;
+   int i=2;
+  int sum=0;
+  int  n;
+  cout<<" enter n number "<<endl;
+     cin>>n;
+  do {
+      cout<<i<<endl;
+      i=i+2;
+  }
+  while(i<n);
+  return 0;
+   
     }

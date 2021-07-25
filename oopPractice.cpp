@@ -2,6 +2,6 @@
 using namespace std;
 int main()
 {
-    cout<<" oop practice " <<endl;
+    cou<<" Hello  " <<endl;
     return 0;
     }

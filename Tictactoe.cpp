@@ -1,8 +1,10 @@
 #include<iostream>
+#include<string.h>
 using namespace std;
 char board[3][3]={{'1','2','3'},{'4','5','6'},{'7','8','9'}};
 char current_marker;
 int current_player;
+string marker_p1;
 void drawboard()
 {
     cout<<"\t\t"<<board[0][0]<<"   |\t"<<board[0][1]<<"   |\t"<<board[0][2]<<endl;
@@ -79,11 +81,18 @@ void swap_player_and_marker()
     }
 }
 void game()
-{
-    cout<<"player one , choose your marker : ";
-    char marker_p1;
+{   
+    cout<<"player one , choose your marker( X | O ) : ";
+    
     cin>>marker_p1;
-    current_player=1;
+     if( strcmp( marker_p1, 'x'))
+     {
+         cout<<"You put invalid marker"<<endl;
+         game();
+     }
+     else
+     {
+        current_player=1;
     current_marker=marker_p1;
     drawboard();
     int player_won;
@@ -120,7 +129,9 @@ void game()
     if(player_won==0)
     {
         cout<<"game is draw";
-    }
+    }  
+     }
+   
 }
 int main()
 {
